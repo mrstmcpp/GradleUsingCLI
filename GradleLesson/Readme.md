@@ -20,7 +20,8 @@ jar{
     }
 }
 ```
-Also add below code if we imported some extra packages i.e. dependencies
+Also add below code if we imported some extra packages i.e. .
+This is called FatJar... Search on StackOverflow...
 
 ```agsl
 jar {
