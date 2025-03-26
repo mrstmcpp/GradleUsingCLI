@@ -15,8 +15,9 @@ public class Main {
         Request req = new Request.Builder()
                 .url(url)
                 .build();
+        //all varibles are set upto here
 
-        try(Response response = client.newCall(req).execute()){
+        try(Response response = client.newCall(req).execute()){ //starting tcp connection when newCall is done...
             if(!response.isSuccessful()){
                 System.out.println("Something went wrong" + response.message());
             }

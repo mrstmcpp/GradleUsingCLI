@@ -20,6 +20,22 @@ jar{
     }
 }
 ```
+Also add below code if we imported some extra packages i.e. dependencies
+
+```agsl
+jar {
+    manifest {
+        attributes (
+                'Main-Class': 'org.mrstm.Main'
+        )
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+```
+
  The above command will build our project.
 ### Execute following code to run
 ```agsl
